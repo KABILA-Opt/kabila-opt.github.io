@@ -4,6 +4,7 @@ function Contact($: JQueryStatic) {
   fetch("/data/contact")
     .then((r) => r.text())
     .then((r) => {
+      elm.html("");
       let list = r.split("\n").map((item) => item.trim());
       list = list.filter((item) => !!item && item[0] !== "#");
       list.forEach((text) => {

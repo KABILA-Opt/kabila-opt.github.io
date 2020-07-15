@@ -18,6 +18,9 @@ function Basics($: JQueryStatic) {
   fetch("/data/main-photo")
     .then((r) => r.text())
     .then((r) => {
-      intro.css("background-image", `url(${r.replace(/\s/g, "")})`);
+      intro.css(
+        "background-image",
+        `url(${IMG_FOLDER}/${r.replace(/\s/g, "")})`,
+      );
     });
 }
