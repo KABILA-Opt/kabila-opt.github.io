@@ -8,9 +8,9 @@ function About($: JQueryStatic) {
       text.html(r);
     });
 
-  fetch("/data/about-title")
+  fetch("/data/about-title.txt")
     .then((r) => r.text())
     .then((r) => {
-      title.html(r.replace(/\s/g, ""));
+      title.html(r);
     });
 }

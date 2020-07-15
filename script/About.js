@@ -6,9 +6,9 @@ function About($) {
         .then(function (r) {
         text.html(r);
     });
-    fetch("/data/about-title")
+    fetch("/data/about-title.txt")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        title.html(r.replace(/\s/g, ""));
+        title.html(r);
     });
 }

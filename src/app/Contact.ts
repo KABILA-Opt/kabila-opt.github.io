@@ -1,7 +1,7 @@
 function Contact($: JQueryStatic) {
   const elm = $("#contact");
 
-  fetch("/data/contact")
+  fetch("/data/contact.txt")
     .then((r) => r.text())
     .then((r) => {
       let list = r.split("\n").map((item) => item.trim());

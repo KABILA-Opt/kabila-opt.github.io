@@ -10,13 +10,15 @@ function Carousel($: JQueryStatic) {
     </div>
   `;
 
-  fetch("/data/carousel")
+  fetch("/data/carousel.txt")
     .then((r) => r.text())
     .then((r) => {
       let list = r.split("\n").map((item) => item.replace(/\s/g, ""));
       list = list.filter((item) => !!item);
-      list.forEach((src) => {
-        carouselPhotos.append(slide.replace("{SOURCE}", src));
+      list.forEach((filename) => {
+        carouselPhotos.append(
+          slide.replace("{SOURCE}", IMG_FOLDER + "/" + filename),
+        );
       });
     });
 }
