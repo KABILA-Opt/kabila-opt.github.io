@@ -7,8 +7,11 @@ function Carousel($) {
         carouselPhotos.html("");
         var list = r.split("\n").map(function (item) { return item.replace(/\s/g, ""); });
         list = list.filter(function (item) { return !!item; });
-        list.forEach(function (filename) {
-            carouselPhotos.append(slide.replace("{SOURCE}", IMG_FOLDER + "/" + filename));
+        list.forEach(function (filename, i) {
+            var slideElm = $(slide.replace("{SOURCE}", IMG_FOLDER + "/" + filename));
+            if (i === 0)
+                slideElm.addClass("active");
+            carouselPhotos.append(slideElm);
         });
     });
 }

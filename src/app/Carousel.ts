@@ -16,10 +16,12 @@ function Carousel($: JQueryStatic) {
       carouselPhotos.html("");
       let list = r.split("\n").map((item) => item.replace(/\s/g, ""));
       list = list.filter((item) => !!item);
-      list.forEach((filename) => {
-        carouselPhotos.append(
+      list.forEach((filename, i) => {
+        const slideElm = $(
           slide.replace("{SOURCE}", IMG_FOLDER + "/" + filename),
         );
+        if (i === 0) slideElm.addClass("active");
+        carouselPhotos.append(slideElm);
       });
     });
 }
