@@ -8,7 +8,7 @@ function About($: JQueryStatic) {
       text.html(r);
     });
 
-  fetch("/data/about-title.txt")
+  fetch("/data/about-title")
     .then((r) => r.text())
     .then((r) => {
       title.html(r);

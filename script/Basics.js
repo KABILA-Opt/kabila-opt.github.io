@@ -2,19 +2,19 @@ function Basics($) {
     var orderLinks = $(".order-link");
     var intro = $("#intro");
     var title = $("#intro-title");
-    fetch("/data/intro-title.txt")
+    fetch("/data/intro-title")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         title.html(r);
     });
-    fetch("/data/orker-link.txt")
+    fetch("/data/order-link")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         orderLinks.attr("href", r.replace(/\s/g, ""));
     });
-    fetch("/data/main-photo.txt")
+    fetch("/data/main-photo")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        intro.css("background-img", "url(" + r.replace(/\s/g, "") + ")");
+        intro.css("background-image", "url(" + r.replace(/\s/g, "") + ")");
     });
 }

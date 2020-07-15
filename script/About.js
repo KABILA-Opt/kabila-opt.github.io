@@ -6,7 +6,7 @@ function About($) {
         .then(function (r) {
         text.html(r);
     });
-    fetch("/data/about-title.txt")
+    fetch("/data/about-title")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         title.html(r);

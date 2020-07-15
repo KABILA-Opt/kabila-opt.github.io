@@ -1,6 +1,6 @@
 function Hours($) {
     var elm = $("#hours");
-    fetch("/data/hours.txt")
+    fetch("/data/hours")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         var list = r.split("\n").map(function (item) { return item.trim(); });

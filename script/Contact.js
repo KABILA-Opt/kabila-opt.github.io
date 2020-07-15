@@ -1,6 +1,6 @@
 function Contact($) {
     var elm = $("#contact");
-    fetch("/data/contact.txt")
+    fetch("/data/contact")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         var list = r.split("\n").map(function (item) { return item.trim(); });

@@ -1,7 +1,7 @@
 function Hours($: JQueryStatic) {
   const elm = $("#hours");
 
-  fetch("/data/hours.txt")
+  fetch("/data/hours")
     .then((r) => r.text())
     .then((r) => {
       let list = r.split("\n").map((item) => item.trim());

@@ -10,9 +10,10 @@ function Carousel($: JQueryStatic) {
     </div>
   `;
 
-  fetch("/data/carousel.txt")
+  fetch("/data/carousel")
     .then((r) => r.text())
     .then((r) => {
+      carouselPhotos.html("");
       let list = r.split("\n").map((item) => item.replace(/\s/g, ""));
       list = list.filter((item) => !!item);
       list.forEach((filename) => {
