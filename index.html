@@ -17,9 +17,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&amp;display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-
     <title>Home - Kabila Optimization</title>
   <meta charset="utf-8"><link rel="manifest" href="/manifest.webmanifest"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:site_name" content="Kabila Optimization"><meta property="fb:app_id" content="000000000000000"><meta property="og:url" content="https://kabila-opt.github.io"><meta property="og:image" content="https://kabila-opt.github.io/img/social.jpg"><meta property="og:type" content="website"><meta property="og:title" content="Home - Kabila Optimization"><meta name="description" content="Kabila Optimization Food and Beverage Service"><meta property="og:description" content="Kabila Optimization Food and Beverage Service"></head>
 
@@ -61,8 +58,20 @@
       </article>
     </section>
 
-    <div id="carousel-photos" class="carousel">
-      {Photos de Carousel}
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul id="carousel-photos" class="glide__slides">
+          {Carousel Photos}
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          prev
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          next
+        </button>
+      </div>
     </div>
 
     <div class="container">
@@ -95,7 +104,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@glidejs/glide"></script>
     <script src="/script/About.js"></script>
     <script src="/script/Basics.js"></script>
     <script src="/script/Carousel.js"></script>

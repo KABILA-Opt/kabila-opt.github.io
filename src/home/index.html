@@ -14,17 +14,6 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-
     <title>Home</title>
   </head>
 
@@ -66,8 +55,20 @@
       </article>
     </section>
 
-    <div id="carousel-photos" class="carousel">
-      {Photos de Carousel}
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul id="carousel-photos" class="glide__slides">
+          {Carousel Photos}
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
+          prev
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">
+          next
+        </button>
+      </div>
     </div>
 
     <div class="container">
@@ -110,7 +111,7 @@
     ></script>
     <script
       type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://unpkg.com/@glidejs/glide"
     ></script>
     <script src="/script/About.js"></script>
     <script src="/script/Basics.js"></script>

@@ -1,13 +1,9 @@
 function Carousel($: JQueryStatic) {
   const carouselPhotos = $("#carousel-photos");
   const slide = `
-    <div class="carousel-item">
-      <img
-        src="{SOURCE}"
-        class="d-block w-100"
-        alt=""
-      />
-    </div>
+    <li class="glide__slide">
+      <img src="{SOURCE}" />
+    </li>
   `;
 
   const settings: any = {
@@ -28,6 +24,6 @@ function Carousel($: JQueryStatic) {
         carouselPhotos.append(slideElm);
       });
       // @ts-ignore
-      $(".carousel").slick(settings);
+      new Glide(".glide").mount();
     });
 }
