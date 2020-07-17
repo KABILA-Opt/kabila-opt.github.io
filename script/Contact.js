@@ -3,7 +3,7 @@ function Contact($) {
     fetch("/data/home/google-map")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        $("#google-map").html(r.replace(/\s/g, ""));
+        $("#google-map").html(r.trim());
     });
     fetch("/data/home/contact")
         .then(function (r) { return r.text(); })

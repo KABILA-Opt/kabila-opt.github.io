@@ -4,7 +4,7 @@ function Contact($: JQueryStatic) {
   fetch("/data/home/google-map")
     .then((r) => r.text())
     .then((r) => {
-      $("#google-map").html(r.replace(/\s/g, ""));
+      $("#google-map").html(r.trim());
     });
 
   fetch("/data/home/contact")

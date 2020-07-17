@@ -3,10 +3,10 @@ function Basics($: JQueryStatic) {
   const intro = $("#intro");
   const title = $("#intro-title");
 
-  fetch("/data/home/intro-title")
+  fetch("/data/home/intro-title.html")
     .then((r) => r.text())
     .then((r) => {
-      title.html(r);
+      title.html(r.trim());
     });
 
   fetch("/data/home/order-link")

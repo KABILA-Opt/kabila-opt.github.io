@@ -13,6 +13,13 @@
       href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
     <title>Home</title>
   </head>
 
@@ -35,8 +42,8 @@
     </nav>
 
     <section id="intro" class="section-intro">
-      <header>
-        <h1 id="intro-title">{Titre d'introduction}</h1>
+      <header id="intro-title">
+        {Titre d'introduction}
       </header>
       <div class="link-to-book-wrapper">
         <a target="_blank" class="order-link link-to-book">Order Now</a>
@@ -45,42 +52,17 @@
 
     <section id="about" class="about-section">
       <article>
-        <h3 id="about-title">
+        <div id="about-title">
           {A propos de nous}
-        </h3>
+        </div>
         <div id="about-text">
           {Nous sommes ....}
         </div>
       </article>
     </section>
 
-    <div
-      id="carouselExampleControls"
-      class="carousel slide"
-      data-ride="carousel"
-    >
-      <div id="carousel-photos" class="carousel-inner">
-        {Photos de Carousel}
-      </div>
-
-      <a
-        class="carousel-control-prev"
-        href="#carouselExampleControls"
-        role="button"
-        data-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a
-        class="carousel-control-next"
-        href="#carouselExampleControls"
-        role="button"
-        data-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+    <div id="carousel-photos" class="carousel">
+      {Photos de Carousel}
     </div>
 
     <div class="container">
@@ -120,6 +102,10 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="/script/About.js"></script>
     <script src="/script/Basics.js"></script>

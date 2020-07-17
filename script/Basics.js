@@ -2,10 +2,10 @@ function Basics($) {
     var orderLinks = $(".order-link");
     var intro = $("#intro");
     var title = $("#intro-title");
-    fetch("/data/home/intro-title")
+    fetch("/data/home/intro-title.html")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        title.html(r);
+        title.html(r.trim());
     });
     fetch("/data/home/order-link")
         .then(function (r) { return r.text(); })

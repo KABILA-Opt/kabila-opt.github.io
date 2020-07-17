@@ -4,11 +4,11 @@ function About($) {
     fetch("/data/home/about-text.html")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        text.html(r);
+        text.html(r.trim());
     });
-    fetch("/data/home/about-title")
+    fetch("/data/home/about-title.html")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        title.html(r);
+        title.html(r.trim());
     });
 }

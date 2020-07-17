@@ -5,12 +5,12 @@ function About($: JQueryStatic) {
   fetch("/data/home/about-text.html")
     .then((r) => r.text())
     .then((r) => {
-      text.html(r);
+      text.html(r.trim());
     });
 
-  fetch("/data/home/about-title")
+  fetch("/data/home/about-title.html")
     .then((r) => r.text())
     .then((r) => {
-      title.html(r);
+      title.html(r.trim());
     });
 }

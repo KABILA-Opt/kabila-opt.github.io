@@ -10,6 +10,10 @@ function Carousel($: JQueryStatic) {
     </div>
   `;
 
+  const settings: any = {
+    //TODO
+  };
+
   fetch("/data/home/carousel")
     .then((r) => r.text())
     .then((r) => {
@@ -23,5 +27,7 @@ function Carousel($: JQueryStatic) {
         if (i === 0) slideElm.addClass("active");
         carouselPhotos.append(slideElm);
       });
+      // @ts-ignore
+      $(".carousel").slick(settings);
     });
 }
