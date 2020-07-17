@@ -1,7 +1,6 @@
 function Carousel($) {
     var carouselPhotos = $("#carousel-photos");
-    var slide = "\n    <li class=\"glide__slide\">\n      <img src=\"{SOURCE}\" />\n    </li>\n  ";
-    var settings = {};
+    var slide = "\n    <div class=\"carousel-item\">\n      <img\n        src=\"{SOURCE}\"\n        class=\"d-block w-100\"\n        alt=\"\"\n      />\n    </div>\n  ";
     fetch("/data/home/carousel")
         .then(function (r) { return r.text(); })
         .then(function (r) {
@@ -14,6 +13,5 @@ function Carousel($) {
                 slideElm.addClass("active");
             carouselPhotos.append(slideElm);
         });
-        new Glide(".glide").mount();
     });
 }

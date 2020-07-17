@@ -38,7 +38,7 @@
           <a target="_blank" class="order-link">Order</a>
         </li>
         <li class="nav-item">
-          <a href="#contact">Contact</a>
+          <a href="#section-contact">Contact</a>
         </li>
       </ul>
     </nav>
@@ -63,20 +63,33 @@
       </article>
     </section>
 
-    <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul id="carousel-photos" class="glide__slides">
-          {Carousel Photos}
-        </ul>
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <div id="carousel-photos" class="carousel-inner">
+        {Photos de Carousel}
       </div>
-      <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
-          prev
-        </button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">
-          next
-        </button>
-      </div>
+
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
     <div class="container">
@@ -89,7 +102,7 @@
             {Horaires}
           </p>
         </div>
-        <div class="contact-adress">
+        <div id="section-contact" class="contact-adress">
           <h3>
             Contact Us
           </h3>
@@ -113,8 +126,9 @@
       crossorigin="anonymous"
     ></script>
     <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/glidejs@2.1.0/dist/glide.min.js"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
     ></script>
     <script src="/script/About.js"></script>
     <script src="/script/Basics.js"></script>

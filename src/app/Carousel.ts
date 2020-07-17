@@ -1,14 +1,14 @@
 function Carousel($: JQueryStatic) {
   const carouselPhotos = $("#carousel-photos");
   const slide = `
-    <li class="glide__slide">
-      <img src="{SOURCE}" />
-    </li>
+    <div class="carousel-item">
+      <img
+        src="{SOURCE}"
+        class="d-block w-100"
+        alt=""
+      />
+    </div>
   `;
-
-  const settings: any = {
-    //TODO
-  };
 
   fetch("/data/home/carousel")
     .then((r) => r.text())
@@ -23,7 +23,5 @@ function Carousel($: JQueryStatic) {
         if (i === 0) slideElm.addClass("active");
         carouselPhotos.append(slideElm);
       });
-      // @ts-ignore
-      new Glide(".glide").mount();
     });
 }
