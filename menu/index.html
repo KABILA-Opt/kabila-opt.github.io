@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="no-js" prefix="og: http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async=""
-      src="https://www.googletagmanager.com/gtag/js?id=UA-172720860-1"
+      src="https://www.googletagmanager.com/gtag/js?id=UA-172949173-1"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,22 +13,59 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "UA-172720860-1", {
+      gtag("config", "UA-172949173-1", {
         page_path: location.pathname + location.hash,
       });
     </script>
     <title>Menu - Kabila Optimization</title>
-    <link rel="stylesheet" href="/menu/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+      integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="/menu/style.css" rel="stylesheet" />
+    <style class="">
+      body {
+        background-color: rgb(243, 194, 103);
+      }
+
+      .section {
+        background-color: rgb(255, 221, 159);
+      }
+
+      .kbl-title {
+        font-family: "Grenze Gotisch", cursive;
+        font-size: 26pt;
+      }
+    </style>
     <meta charset="utf-8" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta property="og:site_name" content="Kabila Optimization" />
     <meta property="fb:app_id" content="000000000000000" />
-    <meta property="og:url" content="https://kabila-opt.github.io" />
+    <meta
+      property="og:url"
+      content="https://kabila-opt.github.io/menu/kabila-menu/index.html"
+    />
     <meta
       property="og:image"
-      content="https://kabila-opt.github.io/img/social-menu.jpg"
+      content="https://kabila-opt.github.io/menu/img/social-menu.jpg"
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Menu - Kabila Optimization" />
@@ -37,6 +74,271 @@
   </head>
 
   <body>
-    <h1>Food Menu</h1>
+    <div id="root">
+      <div id="header">
+        <div class="padding-2">
+          <div style="height: 80px;" class="grid-x align-center align-middle">
+            <div style="height: 40px; margin-right: 8px;">
+              <img src="/res/kabila-menu/feuille-d-erable.png" />
+            </div>
+            <h2 class="kbl-title" style="margin: 0;">
+              Kabila Menu
+            </h2>
+            <div style="height: 40px; margin-left: 8px;">
+              <img src="/res/kabila-menu/fleur-de-lys.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div
+          class="align-center-middle"
+          style="
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            display: flex;
+          "
+        ></div>
+        <div
+          class="section"
+          style="background-color: undefined; padding: 2em 0;"
+        >
+          <div class="grid-x grid-padding-x">
+            <div class="cell medium-8 large-9">
+              <div class="">
+                <div id="item-1" class="" style="margin-bottom: 1em;">
+                  <div class="grid-x">
+                    <div
+                      class="photo-cell cell large-6"
+                      style="
+                        background-color: #444;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: auto 100%;
+                        background-image: url(https://via.placeholder.com/200x100);
+                      "
+                    >
+                      <img
+                        class="photo"
+                        style="
+                          display: block;
+                          align-self: center;
+                          max-width: 100%;
+                          visibility: hidden;
+                        "
+                        src="https://via.placeholder.com/200x100"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="cell large-6">
+                      <div class="card" style="height: 100%; margin: 0;">
+                        <div class="card-section">
+                          <div
+                            class="grid-margin-x grid-x"
+                            style="margin-bottom: 8px;"
+                          ></div>
+
+                          <h6 class="title" style="font-weight: bold;">
+                            Item 1 Title
+                          </h6>
+
+                          <div class="text" style="color: #444;">
+                            Item 1 Text
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="item-2" class="" style="margin-bottom: 1em;">
+                  <div class="grid-x">
+                    <div
+                      class="photo-cell cell large-6"
+                      style="
+                        background-color: #444;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: auto 100%;
+                        background-image: url(https://via.placeholder.com/200x100);
+                      "
+                    >
+                      <img
+                        class="photo"
+                        style="
+                          display: block;
+                          align-self: center;
+                          max-width: 100%;
+                          visibility: hidden;
+                        "
+                        src="https://via.placeholder.com/200x100"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="cell large-6">
+                      <div class="card" style="height: 100%; margin: 0;">
+                        <div class="card-section">
+                          <div
+                            class="grid-margin-x grid-x"
+                            style="margin-bottom: 8px;"
+                          ></div>
+
+                          <h6 class="title" style="font-weight: bold;">
+                            Item 2 Title
+                          </h6>
+
+                          <div class="text" style="color: #444;">
+                            Item 2 Text
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="item-3" class="" style="margin-bottom: 1em;">
+                  <div class="grid-x">
+                    <div
+                      class="photo-cell cell large-6"
+                      style="
+                        background-color: #444;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: auto 100%;
+                        background-image: url(https://via.placeholder.com/200x100);
+                      "
+                    >
+                      <img
+                        class="photo"
+                        style="
+                          display: block;
+                          align-self: center;
+                          max-width: 100%;
+                          visibility: hidden;
+                        "
+                        src="https://via.placeholder.com/200x100"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="cell large-6">
+                      <div class="card" style="height: 100%; margin: 0;">
+                        <div class="card-section">
+                          <div
+                            class="grid-margin-x grid-x"
+                            style="margin-bottom: 8px;"
+                          ></div>
+
+                          <h6 class="title" style="font-weight: bold;">
+                            Item 3 Title
+                          </h6>
+
+                          <div class="text" style="color: #444;">
+                            Item 3 Text
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell medium-4 large-3">
+              <div
+                id="side-photo"
+                class="align-center-middle"
+                style="
+                  position: relative;
+                  overflow: hidden;
+                  margin-bottom: 1em;
+                  display: flex;
+                "
+              >
+                <div class="">
+                  <a
+                    class=""
+                    style="max-width: initial;"
+                    rel="noreferrer noopener"
+                    target=""
+                    href="https://ici.radio-canada.ca/tele/24-60/site"
+                  >
+                    <img
+                      class=""
+                      style="
+                        display: block;
+                        align-self: center;
+                        max-width: initial;
+                        width: 100%;
+                      "
+                      src="https://via.placeholder.com/600x1800"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script class="" src="/script/Menu.js"></script>
+      </div>
+      <div id="footer">
+        <div
+          class="grid-y align-center-middle"
+          style="
+            color: #ccc;
+            background-color: #012;
+            min-height: 120px;
+            position: relative;
+          "
+        >
+          <div class="cell auto grid-x align-center-middle grid-margin-x">
+            <div class="shrink cell">
+              <h6 class="" style="margin: 0;">
+                Find us on
+              </h6>
+            </div>
+
+            <div class="shrink cell">
+              <a
+                class=""
+                rel="noreferrer noopener"
+                target="_blank"
+                href="https://www.facebook.com/kabila-opt"
+              >
+                <img
+                  class=""
+                  style="
+                    display: block;
+                    align-self: center;
+                    max-width: 100%;
+                    filter: invert(1);
+                    width: 20px;
+                    height: 20px;
+                  "
+                  src="https://raw.githubusercontent.com/sugarflakes/simple-icons/develop/icons/facebook.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="cell auto grid-x align-center-middle">
+            © 2020 Kabila Optimization
+          </div>
+
+          <div style="position: absolute; right: 0; bottom: 0; padding: 8px;">
+            <a href="#"><i class="fi-arrow-up"></i>&nbsp;BACK TO TOP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="" async="" defer=""></script>
   </body>
 </html>
