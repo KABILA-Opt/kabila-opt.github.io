@@ -1,7 +1,13 @@
 function Contact($: JQueryStatic) {
   const elm = $("#contact");
 
-  fetch("/data/contact")
+  fetch("/data/home/google-map")
+    .then((r) => r.text())
+    .then((r) => {
+      $("#google-map").html(r.replace(/\s/g, ""));
+    });
+
+  fetch("/data/home/contact")
     .then((r) => r.text())
     .then((r) => {
       elm.html("");

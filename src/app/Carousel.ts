@@ -10,7 +10,7 @@ function Carousel($: JQueryStatic) {
     </div>
   `;
 
-  fetch("/data/carousel")
+  fetch("/data/home/carousel")
     .then((r) => r.text())
     .then((r) => {
       carouselPhotos.html("");

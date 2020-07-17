@@ -1,6 +1,6 @@
 function Hours($) {
     var elm = $("#hours");
-    fetch("/data/hours")
+    fetch("/data/home/hours")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         elm.html("");

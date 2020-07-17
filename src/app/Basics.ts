@@ -3,19 +3,19 @@ function Basics($: JQueryStatic) {
   const intro = $("#intro");
   const title = $("#intro-title");
 
-  fetch("/data/intro-title")
+  fetch("/data/home/intro-title")
     .then((r) => r.text())
     .then((r) => {
       title.html(r);
     });
 
-  fetch("/data/order-link")
+  fetch("/data/home/order-link")
     .then((r) => r.text())
     .then((r) => {
       orderLinks.attr("href", r.replace(/\s/g, ""));
     });
 
-  fetch("/data/main-photo")
+  fetch("/data/home/main-photo")
     .then((r) => r.text())
     .then((r) => {
       intro.css(

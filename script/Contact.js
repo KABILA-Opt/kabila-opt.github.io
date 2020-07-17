@@ -1,6 +1,11 @@
 function Contact($) {
     var elm = $("#contact");
-    fetch("/data/contact")
+    fetch("/data/home/google-map")
+        .then(function (r) { return r.text(); })
+        .then(function (r) {
+        $("#google-map").html(r.replace(/\s/g, ""));
+    });
+    fetch("/data/home/contact")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         elm.html("");

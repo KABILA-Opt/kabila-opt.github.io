@@ -1,7 +1,7 @@
 function Hours($: JQueryStatic) {
   const elm = $("#hours");
 
-  fetch("/data/hours")
+  fetch("/data/home/hours")
     .then((r) => r.text())
     .then((r) => {
       elm.html("");
