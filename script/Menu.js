@@ -8,7 +8,7 @@
     var itemRoot = root + "/item-";
     [1, 2, 3].forEach(function (n) {
         ["photo", "text.html", "title"].forEach(function (k) {
-            fetch(itemRoot + n)
+            fetch(itemRoot + n + "/" + k)
                 .then(function (r) { return r.text(); })
                 .then(function (r) {
                 var data = r.trim();
@@ -22,7 +22,7 @@
                         $("#item-" + n + " .title").html(data);
                         break;
                     case "text":
-                        $("#item-" + n + " .title").html(data);
+                        $("#item-" + n + " .text").html(data);
                         break;
                 }
             });
