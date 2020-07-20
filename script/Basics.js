@@ -15,6 +15,6 @@ function Basics($) {
     fetch("/data/home/main-photo")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        intro.css("background-image", "url(" + IMG_FOLDER + "/" + r.replace(/\s/g, "") + ")");
+        intro.css("background-image", "url(" + IMG_FOLDER + "/" + r.replace(/\s/g, "") + "?v=" + +new Date() + ")");
     });
 }

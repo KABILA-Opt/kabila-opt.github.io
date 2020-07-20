@@ -4,7 +4,10 @@
   fetch(root + "/side-photo")
     .then((r) => r.text())
     .then((r) => {
-      $("#side-photo").attr("src", IMG_FOLDER + "/" + r.replace(/\s/g, ""));
+      $("#side-photo").attr(
+        "src",
+        IMG_FOLDER + "/" + r.replace(/\s/g, "") + "?v=" + +new Date(),
+      );
     });
 
   ["title", "text"].forEach((k) => {
@@ -16,7 +19,7 @@
   });
 
   let itemRoot = root + "/item-";
-  [1, 2, 3].forEach((n) => {
+  [1, 2, 3, 4].forEach((n) => {
     ["photo", "text.html", "title"].forEach((k) => {
       fetch(itemRoot + n + "/" + k)
         .then((r) => r.text())
@@ -24,7 +27,12 @@
           let data = r.trim();
           switch (k) {
             case "photo":
-              let filename = IMG_FOLDER + "/" + data.replace(/\s/g, "");
+              let filename =
+                IMG_FOLDER +
+                "/" +
+                data.replace(/\s/g, "") +
+                "?v=" +
+                +new Date();
               $(`#item-${n} .photo-cell`).css(
                 "background-image",
                 `url(${filename})`,

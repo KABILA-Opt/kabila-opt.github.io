@@ -20,7 +20,7 @@ function Basics($: JQueryStatic) {
     .then((r) => {
       intro.css(
         "background-image",
-        `url(${IMG_FOLDER}/${r.replace(/\s/g, "")})`,
+        `url(${IMG_FOLDER}/${r.replace(/\s/g, "")}?v=${+new Date()})`,
       );
     });
 }

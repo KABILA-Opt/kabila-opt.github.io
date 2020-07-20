@@ -3,7 +3,7 @@
     fetch(root + "/side-photo")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        $("#side-photo").attr("src", IMG_FOLDER + "/" + r.replace(/\s/g, ""));
+        $("#side-photo").attr("src", IMG_FOLDER + "/" + r.replace(/\s/g, "") + "?v=" + +new Date());
     });
     ["title", "text"].forEach(function (k) {
         fetch(root + "/allergen-disclaimer-" + k)
@@ -13,7 +13,7 @@
         });
     });
     var itemRoot = root + "/item-";
-    [1, 2, 3].forEach(function (n) {
+    [1, 2, 3, 4].forEach(function (n) {
         ["photo", "text.html", "title"].forEach(function (k) {
             fetch(itemRoot + n + "/" + k)
                 .then(function (r) { return r.text(); })
@@ -21,7 +21,11 @@
                 var data = r.trim();
                 switch (k) {
                     case "photo":
-                        var filename = IMG_FOLDER + "/" + data.replace(/\s/g, "");
+                        var filename = IMG_FOLDER +
+                            "/" +
+                            data.replace(/\s/g, "") +
+                            "?v=" +
+                            +new Date();
                         $("#item-" + n + " .photo-cell").css("background-image", "url(" + filename + ")");
                         $("#item-" + n + " .photo").attr("src", filename);
                         break;

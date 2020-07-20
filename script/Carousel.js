@@ -8,7 +8,7 @@ function Carousel($) {
         var list = r.split("\n").map(function (item) { return item.replace(/\s/g, ""); });
         list = list.filter(function (item) { return !!item; });
         list.forEach(function (filename, i) {
-            var slideElm = $(slide.replace("{SOURCE}", IMG_FOLDER + "/" + filename));
+            var slideElm = $(slide.replace("{SOURCE}", IMG_FOLDER + "/" + filename + "?v=" + +new Date()));
             if (i === 0)
                 slideElm.addClass("active");
             carouselPhotos.append(slideElm);

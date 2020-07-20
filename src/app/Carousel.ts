@@ -18,7 +18,10 @@ function Carousel($: JQueryStatic) {
       list = list.filter((item) => !!item);
       list.forEach((filename, i) => {
         const slideElm = $(
-          slide.replace("{SOURCE}", IMG_FOLDER + "/" + filename),
+          slide.replace(
+            "{SOURCE}",
+            IMG_FOLDER + "/" + filename + "?v=" + +new Date(),
+          ),
         );
         if (i === 0) slideElm.addClass("active");
         carouselPhotos.append(slideElm);
