@@ -32,11 +32,10 @@ iframe {
 }
 
 .nav-flex-row li a {
-  font-family: "Big Shoulders Text", cursive;
-  color: #ffffff;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: 300;
+  font-family: "Grenze Gotisch", cursive;
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 300;
 }
 
 .section-intro {
@@ -50,10 +49,11 @@ iframe {
 
 .section-intro h1 {
   font-family: "Grenze Gotisch", cursive;
-  text-align: center;
-  color: #ffffff;
-  font-size: 4em;
-  font-weight: 700;
+    text-align: center;
+    color: gold;
+    font-size: 4em;
+    font-weight: 700;
+    text-shadow: 1px 1px 16px #444;
 }
 
 .section-intro header {
