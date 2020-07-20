@@ -21,7 +21,7 @@
                     case "title":
                         $("#item-" + n + " .title").html(data);
                         break;
-                    case "text":
+                    case "text.html":
                         $("#item-" + n + " .text").html(data);
                         break;
                 }
