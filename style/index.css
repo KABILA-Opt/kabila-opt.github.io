@@ -89,7 +89,7 @@ a.link-to-book:hover {
 }
 
 .about-section p {
-  text-align: justify;
+  text-align: left;
 }
 .about-section h3 {
   padding-bottom: 24px;
