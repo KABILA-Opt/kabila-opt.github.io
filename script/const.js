@@ -1,1 +1,1 @@
-var IMG_FOLDER = "img";
+var IMG_FOLDER = "/img";

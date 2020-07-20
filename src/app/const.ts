@@ -1,1 +1,1 @@
-const IMG_FOLDER = "img";
+const IMG_FOLDER = "/img";
