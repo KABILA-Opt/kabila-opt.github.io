@@ -21,9 +21,9 @@
                 var data = r.trim();
                 switch (k) {
                     case "photo":
-                        var src = data.replace(/\s/g, "");
-                        $("#item-" + n + " .photo-cell").css("background-image", "url(" + src + ")");
-                        $("#item-" + n + " .photo").attr("src", IMG_FOLDER + "/" + src);
+                        var filename = IMG_FOLDER + "/" + data.replace(/\s/g, "");
+                        $("#item-" + n + " .photo-cell").css("background-image", "url(" + filename + ")");
+                        $("#item-" + n + " .photo").attr("src", filename);
                         break;
                     case "title":
                         $("#item-" + n + " .title").html(data);

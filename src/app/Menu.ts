@@ -24,12 +24,12 @@
           let data = r.trim();
           switch (k) {
             case "photo":
-              let src = data.replace(/\s/g, "");
+              let filename = IMG_FOLDER + "/" + data.replace(/\s/g, "");
               $(`#item-${n} .photo-cell`).css(
                 "background-image",
-                `url(${src})`,
+                `url(${filename})`,
               );
-              $(`#item-${n} .photo`).attr("src", IMG_FOLDER + "/" + src);
+              $(`#item-${n} .photo`).attr("src", filename);
               break;
 
             case "title":
