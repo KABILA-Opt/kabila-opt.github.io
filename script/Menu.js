@@ -3,7 +3,14 @@
     fetch(root + "/side-photo")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        $("#side-photo").attr("src", r.replace(/\s/g, ""));
+        $("#side-photo").attr("src", IMG_FOLDER + "/" + r.replace(/\s/g, ""));
+    });
+    ["title", "text"].forEach(function (k) {
+        fetch(root + "/allergen-disclaimer-" + k)
+            .then(function (r) { return r.text(); })
+            .then(function (r) {
+            $("#allergen-disclaimer-" + k).text(r.trim());
+        });
     });
     var itemRoot = root + "/item-";
     [1, 2, 3].forEach(function (n) {
@@ -16,7 +23,7 @@
                     case "photo":
                         var src = data.replace(/\s/g, "");
                         $("#item-" + n + " .photo-cell").css("background-image", "url(" + src + ")");
-                        $("#item-" + n + " .photo").attr("src", src);
+                        $("#item-" + n + " .photo").attr("src", IMG_FOLDER + "/" + src);
                         break;
                     case "title":
                         $("#item-" + n + " .title").html(data);
