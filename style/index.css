@@ -34,7 +34,7 @@ iframe {
 .nav-flex-row li a {
   font-family: "Grenze Gotisch", cursive;
   color: #ffffff;
-  font-size: 15pt;
+  font-size: 28pt;
   font-weight: 300;
 }
 
@@ -49,11 +49,11 @@ iframe {
 
 .section-intro h1 {
   font-family: "Grenze Gotisch", cursive;
-    text-align: center;
-    color: gold;
-    font-size: 4em;
-    font-weight: 700;
-    text-shadow: 1px 1px 16px #444;
+  text-align: center;
+  color: gold;
+  font-size: 4em;
+  font-weight: 700;
+  text-shadow: 1px 1px 16px #444;
 }
 
 .section-intro header {
@@ -160,6 +160,10 @@ a.link-to-book:hover {
 }
 
 @media screen and (max-width: 576px) {
+  .nav-flex-row li a {
+    font-size: 15pt;
+  }
+
   .section-intro {
     height: 300px;
   }
