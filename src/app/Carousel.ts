@@ -1,5 +1,4 @@
-function Carousel($: JQueryStatic) {
-  const carouselPhotos = $("#carousel-photos");
+(($: JQueryStatic) => {
   const slide = `
     <div class="carousel-item">
       <img
@@ -10,9 +9,11 @@ function Carousel($: JQueryStatic) {
     </div>
   `;
 
-  fetch("/data/home/carousel")
+  fetch("/data/" + locale() + "/home/carousel")
     .then((r) => r.text())
     .then((r) => {
+      const carouselPhotos = $("#carousel-photos");
+
       carouselPhotos.html("");
       let list = r.split("\n").map((item) => item.replace(/\s/g, ""));
       list = list.filter((item) => !!item);
@@ -27,4 +28,4 @@ function Carousel($: JQueryStatic) {
         carouselPhotos.append(slideElm);
       });
     });
-}
+})(jQuery);

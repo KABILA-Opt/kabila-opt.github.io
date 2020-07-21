@@ -10,6 +10,15 @@ iframe {
   height: 400px;
 }
 
+#locales {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+section {
+  position: relative;
+}
+
 .carousel img {
   max-width: 100%;
 }
@@ -92,14 +101,14 @@ a.link-to-book:hover {
   text-align: left;
 }
 .about-section h3 {
-  padding-bottom: 24px;
+  margin-bottom: 24px !important;
   text-align: center;
-  width: 60%;
+  /* width: 60%; */
   margin: auto;
   font-family: "Grenze Gotisch", cursive;
   color: gold;
   text-shadow: 1px 1px 4px #000;
-  font-size: 1.8em;
+  font-size: 20pt;
 }
 
 .row-flex {
@@ -158,8 +167,7 @@ a.link-to-book:hover {
     height: 500px;
   }
 
-  .about-section p,
-  .about-section h3 {
+  .about-section p {
     font-size: 20px;
   }
 
@@ -186,8 +194,7 @@ a.link-to-book:hover {
     font-size: 2em;
   }
 
-  .about-section p,
-  .about-section h3 {
+  .about-section p {
     font-size: 15px;
   }
 

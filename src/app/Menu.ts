@@ -1,5 +1,5 @@
 (($: JQueryStatic) => {
-  let root = "/data/menu";
+  let root = "/data/" + locale() + "/menu";
 
   fetch(root + "/side-photo")
     .then((r) => r.text())

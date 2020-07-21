@@ -34,12 +34,19 @@
     />
     <link href="/menu/style.css" rel="stylesheet" />
     <style class="">
+      body,
+      .card,
+      .section {
+        background-color: transparent;
+      }
+
       body {
-        background-color: rgb(243, 194, 103);
+        background-image: url(/res/kabila-menu/floral-bg-1.jpg);
+        background-repeat: repeat-x repeat-y;
       }
 
       .section {
-        background-color: rgb(255, 221, 159);
+        padding: 20px;
       }
 
       .kbl-title {
@@ -70,8 +77,8 @@
   <body>
     <div id="root">
       <div id="header">
-        <div style="position: relative;" class="padding-2">
-          <div style="position: absolute; left: 10px; top: 10px;">
+        <div class="grid-padding-x grid-padding-y grid-x">
+          <div class="auto cell">
             <a
               class=""
               rel="noreferrer noopener"
@@ -92,6 +99,13 @@
               />
             </a>
           </div>
+
+          <div class="shrink cell">
+            <div id="locales" class=""></div>
+          </div>
+        </div>
+        <div style="position: relative;" class="padding-2">
+          <div style="position: absolute; left: 10px; top: 10px;"></div>
           <div style="height: 80px;" class="grid-x align-center align-middle">
             <div style="margin-right: 8px;">
               <img
@@ -112,19 +126,6 @@
         </div>
       </div>
       <div id="content">
-        <div
-          class="align-center-middle"
-          style="
-            position: fixed;
-            overflow: hidden;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-            display: flex;
-          "
-        ></div>
         <div
           class="section"
           style="background-color: undefined; padding: 2em 0;"
@@ -366,56 +367,7 @@
           </div>
         </div>
       </div>
-      <div id="footer">
-        <div
-          class="grid-y align-center-middle"
-          style="
-            color: #ccc;
-            background-color: #012;
-            min-height: 120px;
-            position: relative;
-          "
-        >
-          <div class="cell auto grid-x align-center-middle grid-margin-x">
-            <div class="shrink cell">
-              <h6 class="" style="margin: 0;">
-                Find us on
-              </h6>
-            </div>
-
-            <div class="shrink cell">
-              <a
-                class=""
-                rel="noreferrer noopener"
-                target="_blank"
-                href="https://www.facebook.com/kabila-opt"
-              >
-                <img
-                  class=""
-                  style="
-                    display: block;
-                    align-self: center;
-                    max-width: 100%;
-                    filter: invert(1);
-                    width: 20px;
-                    height: 20px;
-                  "
-                  src="https://raw.githubusercontent.com/sugarflakes/svg-icon/master/dist/svg/logos/facebook.svg"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-
-          <div class="cell auto grid-x align-center-middle">
-            © 2020 Kabila Optimization
-          </div>
-
-          <div style="position: absolute; right: 0; bottom: 0; padding: 8px;">
-            <a href="#"><i class="fi-arrow-up"></i>&nbsp;BACK TO TOP</a>
-          </div>
-        </div>
-      </div>
+      <div id="footer"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script
@@ -424,7 +376,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <script class="" src="/script/const.js?v=1595285152488"></script>
-    <script class="" src="/script/Menu.js?v=1595285152491"></script>
+    <script class="" src="/script/const.js?v=1595344381022"></script>
+    <script class="" src="/script/Locales.js?v=1595344381023"></script>
+    <script class="" src="/script/Menu.js?v=1595344381024"></script>
+    <script class="" src="/script/Footer.js?v=1595344381025"></script>
   </body>
 </html>

@@ -1,26 +1,22 @@
-function Basics($: JQueryStatic) {
-  const orderLinks = $(".order-link");
-  const intro = $("#intro");
-  const title = $("#intro-title");
-
-  fetch("/data/home/intro-title.html")
+(($: JQueryStatic) => {
+  fetch("/data/" + locale() + "/home/intro-title.html")
     .then((r) => r.text())
     .then((r) => {
-      title.html(r.trim());
+      $("#intro-title").html(r.trim());
     });
 
-  fetch("/data/home/order-link")
+  fetch("/data/" + locale() + "/home/order-link")
     .then((r) => r.text())
     .then((r) => {
-      orderLinks.attr("href", r.replace(/\s/g, ""));
+      $(".order-link").attr("href", r.replace(/\s/g, ""));
     });
 
-  fetch("/data/home/main-photo")
+  fetch("/data/" + locale() + "/home/main-photo")
     .then((r) => r.text())
     .then((r) => {
-      intro.css(
+      $("#intro").css(
         "background-image",
         `url(${IMG_FOLDER}/${r.replace(/\s/g, "")}?v=${+new Date()})`,
       );
     });
-}
+})(jQuery);

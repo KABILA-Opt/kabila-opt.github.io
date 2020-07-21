@@ -1,9 +1,9 @@
-function Carousel($) {
-    var carouselPhotos = $("#carousel-photos");
+(function ($) {
     var slide = "\n    <div class=\"carousel-item\">\n      <img\n        src=\"{SOURCE}\"\n        class=\"d-block w-100\"\n        alt=\"\"\n      />\n    </div>\n  ";
-    fetch("/data/home/carousel")
+    fetch("/data/" + locale() + "/home/carousel")
         .then(function (r) { return r.text(); })
         .then(function (r) {
+        var carouselPhotos = $("#carousel-photos");
         carouselPhotos.html("");
         var list = r.split("\n").map(function (item) { return item.replace(/\s/g, ""); });
         list = list.filter(function (item) { return !!item; });
@@ -14,4 +14,4 @@ function Carousel($) {
             carouselPhotos.append(slideElm);
         });
     });
-}
+})(jQuery);

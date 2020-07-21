@@ -1,5 +1,5 @@
 (function ($) {
-    var root = "/data/menu";
+    var root = "/data/" + locale() + "/menu";
     fetch(root + "/side-photo")
         .then(function (r) { return r.text(); })
         .then(function (r) {

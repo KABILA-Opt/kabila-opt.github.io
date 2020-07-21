@@ -1,20 +1,17 @@
-function Basics($) {
-    var orderLinks = $(".order-link");
-    var intro = $("#intro");
-    var title = $("#intro-title");
-    fetch("/data/home/intro-title.html")
+(function ($) {
+    fetch("/data/" + locale() + "/home/intro-title.html")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        title.html(r.trim());
+        $("#intro-title").html(r.trim());
     });
-    fetch("/data/home/order-link")
+    fetch("/data/" + locale() + "/home/order-link")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        orderLinks.attr("href", r.replace(/\s/g, ""));
+        $(".order-link").attr("href", r.replace(/\s/g, ""));
     });
-    fetch("/data/home/main-photo")
+    fetch("/data/" + locale() + "/home/main-photo")
         .then(function (r) { return r.text(); })
         .then(function (r) {
-        intro.css("background-image", "url(" + IMG_FOLDER + "/" + r.replace(/\s/g, "") + "?v=" + +new Date() + ")");
+        $("#intro").css("background-image", "url(" + IMG_FOLDER + "/" + r.replace(/\s/g, "") + "?v=" + +new Date() + ")");
     });
-}
+})(jQuery);
