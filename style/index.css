@@ -66,6 +66,8 @@ iframe {
 
 .link-to-book-wrapper {
   flex: 1;
+  margin-bottom: 79px;
+  font-size: 27pt;
 }
 
 .about-section {
@@ -80,6 +82,7 @@ iframe {
   display: block;
   border: 2px solid #ffffff;
   padding: 5px 10px;
+  font-family: "Grenze Gotisch", cursive;
 }
 
 a.link-to-book:hover {
