@@ -1,12 +1,12 @@
 function About($) {
-    var title = $("#chef-at-your-home-title");
-    var text = $("#chef-at-your-home-text");
-    fetch("/data/home/chef-at-your-home-text.html")
+    var title = $("#chef-title");
+    var text = $("#chef-text");
+    fetch("/data/home/chef-text.html")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         text.html(r.trim());
     });
-    fetch("/data/home/chef-at-your-home-title.html")
+    fetch("/data/home/chef-title.html")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         title.html(r.trim());

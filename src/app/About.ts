@@ -1,14 +1,14 @@
 function About($: JQueryStatic) {
-  let title = $("#chef-at-your-home-title");
-  let text = $("#chef-at-your-home-text");
+  let title = $("#chef-title");
+  let text = $("#chef-text");
 
-  fetch("/data/home/chef-at-your-home-text.html")
+  fetch("/data/home/chef-text.html")
     .then((r) => r.text())
     .then((r) => {
       text.html(r.trim());
     });
 
-  fetch("/data/home/chef-at-your-home-title.html")
+  fetch("/data/home/chef-title.html")
     .then((r) => r.text())
     .then((r) => {
       title.html(r.trim());
