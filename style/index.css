@@ -53,7 +53,7 @@ iframe {
   color: gold;
   font-size: 4em;
   font-weight: 700;
-  text-shadow: 1px 1px 16px #444;
+  text-shadow: 1px 1px 4px #000;
 }
 
 .section-intro header {
@@ -96,9 +96,10 @@ a.link-to-book:hover {
   text-align: center;
   width: 60%;
   margin: auto;
-  font-family: "Big Shoulders Text", cursive;
+  font-family: "Grenze Gotisch", cursive;
+  color: gold;
+  text-shadow: 1px 1px 4px #000;
   font-size: 1.8em;
-  text-transform: uppercase;
 }
 
 .row-flex {
@@ -141,6 +142,15 @@ a.link-to-book:hover {
 .opening-time p span,
 .contact-adress p span {
   display: block;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 40px !important;
+  height: 40px !important;
+  background-color: black !important;
+  background-size: 20px !important;
+  border-radius: 20px !important;
 }
 
 @media (min-width: 577px) and (max-width: 800px) {
