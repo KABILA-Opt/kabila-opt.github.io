@@ -5,7 +5,8 @@ const convenientStore = (key: string, value?: string) => {
   return window.localStorage.setItem(key, value.toString());
 };
 
-type Locale = "en" | "fr";
+const LOCALES = ["en", "fr"] as const;
+type Locale = typeof LOCALES[number];
 
 const LOCALE_KEY = "__locale";
 

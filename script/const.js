@@ -4,6 +4,7 @@ var convenientStore = function (key, value) {
         return window.localStorage.getItem(key);
     return window.localStorage.setItem(key, value.toString());
 };
+var LOCALES = ["en", "fr"];
 var LOCALE_KEY = "__locale";
 function params(k) {
     var urlParams = new URLSearchParams(window.location.search);
