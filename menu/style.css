@@ -1,0 +1,22 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card ul li {
+  font-weight: bold;
+}
+
+body,
+.section {
+  background-color: transparent;
+}
+
+body {
+  background-image: url(/res/kabila-menu/floral-bg-1.jpg);
+  background-repeat: repeat-x repeat-y;
+}
+
+.kbl-title {
+  font-family: "Grenze Gotisch", cursive;
+  font-size: 26pt;
+}
