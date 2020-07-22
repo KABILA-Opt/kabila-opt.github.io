@@ -36,6 +36,9 @@ section {
   text-decoration: none;
   list-style-type: none;
   padding: 20px 15px;
+  text-align: center;
+  align-items: center;
+  display: flex;
 }
 
 .nav-flex-row li a {
@@ -92,7 +95,7 @@ section {
 
 a.link-to-book:hover {
   background-color: white;
-  color: #0fa;
+  color: #95999e;
   text-decoration: none;
 }
 
