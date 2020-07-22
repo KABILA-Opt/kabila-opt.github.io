@@ -12,7 +12,7 @@
     fetch("/data/" + locale() + "/translate/" + k)
       .then((r) => r.text())
       .then((r) => {
-        $("." + k).text(r.trim());
+        $(".translate-" + k).text(r.trim());
       });
   });
 })(jQuery);

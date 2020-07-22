@@ -35,7 +35,7 @@ section {
 .nav-flex-row li {
   text-decoration: none;
   list-style-type: none;
-  padding: 20px 15px;
+  padding: 20px 7px;
 }
 
 .nav-flex-row li a {
@@ -178,7 +178,7 @@ a.link-to-book:hover {
 
 @media screen and (max-width: 576px) {
   .nav-flex-row li a {
-    font-size: 15pt;
+    font-size: 12pt;
   }
 
   .section-intro {
