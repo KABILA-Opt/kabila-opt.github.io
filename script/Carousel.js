@@ -1,6 +1,6 @@
 (function ($) {
     var slide = "\n    <div class=\"carousel-item\">\n      <img\n        src=\"{SOURCE}\"\n        class=\"d-block w-100\"\n        alt=\"\"\n      />\n    </div>\n  ";
-    fetch("/data/" + locale() + "/home/carousel")
+    fetch("/data/carousel")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         var carouselPhotos = $("#carousel-photos");

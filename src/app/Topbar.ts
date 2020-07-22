@@ -1,7 +1,6 @@
 (($: JQueryStatic) => {
-  console.log("current locale", locale());
-  const n = "locales";
-  fetch("/data/" + n + ".html")
+  const n = "topbar";
+  fetch("/data/" + n + ".html?v=" + +new Date())
     .then((r) => r.text())
     .then((r) => {
       $("#" + n).html(r.trim());

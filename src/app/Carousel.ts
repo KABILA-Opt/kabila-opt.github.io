@@ -9,7 +9,7 @@
     </div>
   `;
 
-  fetch("/data/" + locale() + "/home/carousel")
+  fetch("/data/carousel")
     .then((r) => r.text())
     .then((r) => {
       const carouselPhotos = $("#carousel-photos");
