@@ -2,7 +2,7 @@
     var n = "footer";
     var iconNames = ["facebook", "instagram-icon", "youtube"];
     var iconBtn = "\n    <a style=\"display:inline-block;margin:0 8px;\" rel=\"noreferrer noopener\" target=\"_blank\" href=\"{URL}\">\n      <img\n        class=\"social-icon\"\n        src=\"https://raw.githubusercontent.com/sugarflakes/svg-icon/master/dist/svg/logos/{NAME}.svg\"\n        alt=\"\"\n      />\n    </a>\n  ";
-    $("body").append("\n    <style>\n      .social-icon {\n        display: block;\n        align-self: center;\n        max-width: 100%;\n        filter: invert(1);\n        width: 20px;\n        height: 20px;\n      }\n    </style>\n  ");
+    $("body").append("\n    <style>\n      .social-icon {\n        display: block;\n        align-self: center;\n        max-width: 100%;\n        _filter: invert(1);\n        width: 25px;\n        height: 25px;\n      }\n    </style>\n  ");
     fetch("/data/" + n + ".html?v=" + +new Date())
         .then(function (r) { return r.text(); })
         .then(function (r) {

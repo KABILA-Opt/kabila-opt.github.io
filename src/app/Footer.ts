@@ -17,9 +17,9 @@
         display: block;
         align-self: center;
         max-width: 100%;
-        filter: invert(1);
-        width: 20px;
-        height: 20px;
+        _filter: invert(1);
+        width: 25px;
+        height: 25px;
       }
     </style>
   `);
