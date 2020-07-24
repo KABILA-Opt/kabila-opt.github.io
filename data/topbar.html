@@ -1,9 +1,9 @@
-<div>
-  <span class="social-btns"></span>
+<div class="topbar-content">
+  <div class="social-btns"></div>
 
-  &nbsp;
+  <img width="40" />
 
-  <span>
+  <div>
     <a class="locale-btn" id="locale-en" href="#">
       EN
     </a>
@@ -13,10 +13,16 @@
     <a class="locale-btn" id="locale-fr" href="#">
       FR
     </a>
-  </span>
+  </div>
 </div>
 
 <style>
+  .topbar-content {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+  }
   .locale-btn:visited,
   .locale-btn:active,
   .locale-btn:hover,
