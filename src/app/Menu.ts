@@ -19,7 +19,7 @@
   });
 
   let itemRoot = root + "/item-";
-  [1, 2, 3, 4, 5, 6, 7].forEach((n) => {
+  [1, 2, 3, 4, 5, 6, 7, 8].forEach((n) => {
     ["photo", "text.html", "title"].forEach((k) => {
       fetch(itemRoot + n + "/" + k)
         .then((r) => r.text())
