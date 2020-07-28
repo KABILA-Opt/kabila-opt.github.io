@@ -13,7 +13,7 @@
         });
     });
     var itemRoot = root + "/item-";
-    [1, 2, 3, 4, 5, 6, 7, 8, 9].forEach(function (n) {
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(function (n) {
         ["photo", "text.html", "title"].forEach(function (k) {
             fetch(itemRoot + n + "/" + k)
                 .then(function (r) { return r.text(); })
