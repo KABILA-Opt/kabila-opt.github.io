@@ -13,7 +13,7 @@
         });
     });
     var itemRoot = root + "/item-";
-    fetch(root + "/menu-control")
+    fetch("/data/menu-control")
         .then(function (r) { return r.text(); })
         .then(function (r) {
         var list = r.split("\n").map(function (item) { return item.trim(); });

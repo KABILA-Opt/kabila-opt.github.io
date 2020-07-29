@@ -20,7 +20,7 @@
 
   let itemRoot = root + "/item-";
 
-  fetch(root + "/menu-control")
+  fetch("/data/menu-control")
     .then((r) => r.text())
     .then((r) => {
       let list = r.split("\n").map((item) => item.trim());
