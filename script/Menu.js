@@ -13,30 +13,43 @@
         });
     });
     var itemRoot = root + "/item-";
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(function (n) {
-        ["photo", "text.html", "title"].forEach(function (k) {
-            fetch(itemRoot + n + "/" + k)
-                .then(function (r) { return r.text(); })
-                .then(function (r) {
-                var data = r.trim();
-                switch (k) {
-                    case "photo":
-                        var filename = IMG_FOLDER +
-                            "/" +
-                            data.replace(/\s/g, "") +
-                            "?v=" +
-                            +new Date();
-                        $("#item-" + n + " .photo-cell").css("background-image", "url(" + filename + ")");
-                        $("#item-" + n + " .photo").attr("src", filename);
-                        break;
-                    case "title":
-                        $("#item-" + n + " .title").html(data);
-                        break;
-                    case "text.html":
-                        $("#item-" + n + " .text").html(data);
-                        break;
-                }
-            });
+    fetch(root + "/menu-control")
+        .then(function (r) { return r.text(); })
+        .then(function (r) {
+        var list = r.split("\n").map(function (item) { return item.trim(); });
+        list = list.filter(function (item) { return !!item && item[0] !== "#"; });
+        list.forEach(function (x) {
+            try {
+                var n_1 = parseInt(x);
+                $("#item-" + n_1).css("display", "block");
+                ["photo", "text.html", "title"].forEach(function (k) {
+                    fetch(itemRoot + n_1 + "/" + k)
+                        .then(function (r) { return r.text(); })
+                        .then(function (r) {
+                        var data = r.trim();
+                        switch (k) {
+                            case "photo":
+                                var filename = IMG_FOLDER +
+                                    "/" +
+                                    data.replace(/\s/g, "") +
+                                    "?v=" +
+                                    +new Date();
+                                $("#item-" + n_1 + " .photo-cell").css("background-image", "url(" + filename + ")");
+                                $("#item-" + n_1 + " .photo").attr("src", filename);
+                                break;
+                            case "title":
+                                $("#item-" + n_1 + " .title").html(data);
+                                break;
+                            case "text.html":
+                                $("#item-" + n_1 + " .text").html(data);
+                                break;
+                        }
+                    });
+                });
+            }
+            catch (e) {
+                console.warn(e);
+            }
         });
     });
 })(jQuery);
