@@ -12,7 +12,7 @@
         var list = r.split("\n").map(function (item) { return item.trim(); });
         list = list.filter(function (item) { return !!item && item[0] !== "#"; });
         list.forEach(function (text) {
-            elm.append("<span>" + text + "</span>");
+            elm.append("<div>" + text + "</div>");
         });
     });
 })(jQuery);
