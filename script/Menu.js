@@ -1,10 +1,5 @@
 (function ($) {
     var root = "/data/" + locale() + "/menu";
-    fetch(root + "/side-photo")
-        .then(function (r) { return r.text(); })
-        .then(function (r) {
-        $("#side-photo").attr("src", IMG_FOLDER + "/" + r.replace(/\s/g, "") + "?v=" + +new Date());
-    });
     ["title", "text"].forEach(function (k) {
         fetch(root + "/allergen-disclaimer-" + k)
             .then(function (r) { return r.text(); })

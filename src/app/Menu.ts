@@ -1,14 +1,14 @@
 (($: JQueryStatic) => {
   let root = "/data/" + locale() + "/menu";
 
-  fetch(root + "/side-photo")
-    .then((r) => r.text())
-    .then((r) => {
-      $("#side-photo").attr(
-        "src",
-        IMG_FOLDER + "/" + r.replace(/\s/g, "") + "?v=" + +new Date(),
-      );
-    });
+  // fetch(root + "/side-photo")
+  //   .then((r) => r.text())
+  //   .then((r) => {
+  //     $("#side-photo").attr(
+  //       "src",
+  //       IMG_FOLDER + "/" + r.replace(/\s/g, "") + "?v=" + +new Date(),
+  //     );
+  //   });
 
   ["title", "text"].forEach((k) => {
     fetch(root + "/allergen-disclaimer-" + k)
