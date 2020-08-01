@@ -21,6 +21,10 @@ section {
   position: relative;
 }
 
+.carousel {
+  height: 50vh;
+}
+
 .carousel img {
   max-width: 100%;
 }
@@ -49,7 +53,7 @@ section {
 }
 
 .section-intro {
-  height: 820px;
+  height: 50vh;
   background-size: cover;
   display: flex;
   flex-direction: column;
