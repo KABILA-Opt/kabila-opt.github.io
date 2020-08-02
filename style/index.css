@@ -25,6 +25,7 @@ section {
   height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .carousel img {
@@ -56,6 +57,7 @@ section {
 
 .section-intro {
   height: 100vh;
+  min-width: 50vw;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -171,8 +173,8 @@ a.link-to-book:hover {
 }
 
 @media (min-width: 577px) and (max-width: 800px) {
-  .section-intro {
-    height: 500px;
+  .carousel {
+    height: auto !important;
   }
 
   .about-section p {
@@ -190,8 +192,8 @@ a.link-to-book:hover {
     font-size: 15pt;
   }
 
-  .section-intro {
-    height: 500px;
+  .carousel {
+    height: auto !important;
   }
 
   .about-section {
