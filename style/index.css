@@ -53,6 +53,7 @@ section {
   color: white;
   font-size: 28pt;
   font-weight: 300;
+  text-shadow: 1px 1px 10px #000;
 }
 
 .section-intro {
@@ -102,9 +103,9 @@ section {
 }
 
 a.link-to-book:hover {
-  background-color: white;
-  color: #0e0;
+  background-color: #fde53c;
   text-decoration: none;
+  color: white;
 }
 
 .about-section p {
