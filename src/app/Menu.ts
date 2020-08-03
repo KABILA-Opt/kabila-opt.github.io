@@ -50,7 +50,7 @@
                     break;
 
                   case "title":
-                    $(`#item-${n} .title`).html(data);
+                    $(`#item-${n} .title`).html(`#${n}・${data}`);
                     break;
 
                   case "text.html":

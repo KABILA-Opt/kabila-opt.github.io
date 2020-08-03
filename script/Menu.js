@@ -33,7 +33,7 @@
                                 $("#item-" + n_1 + " .photo").attr("src", filename);
                                 break;
                             case "title":
-                                $("#item-" + n_1 + " .title").html(data);
+                                $("#item-" + n_1 + " .title").html("#" + n_1 + "\u30FB" + data);
                                 break;
                             case "text.html":
                                 $("#item-" + n_1 + " .text").html(data);
