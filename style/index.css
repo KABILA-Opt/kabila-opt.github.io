@@ -27,6 +27,7 @@ section {
   align-items: center;
   overflow: hidden;
   background: black;
+  width: 100%;
 }
 
 .carousel img {
