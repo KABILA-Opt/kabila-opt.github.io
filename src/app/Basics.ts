@@ -1,6 +1,6 @@
 (($: JQueryStatic) => {
   ["doordash", "ubereats"].forEach((k) => {
-    fetch(`/data/home/btn-${k}.html`)
+    fetch(`/data/btn-${k}.html`)
       .then((r) => r.text())
       .then((r) => {
         $(`.btn-${k}`).html(r.trim());

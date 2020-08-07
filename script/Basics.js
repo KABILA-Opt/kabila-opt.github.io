@@ -1,6 +1,6 @@
 (function ($) {
     ["doordash", "ubereats"].forEach(function (k) {
-        fetch("/data/home/btn-" + k + ".html")
+        fetch("/data/btn-" + k + ".html")
             .then(function (r) { return r.text(); })
             .then(function (r) {
             $(".btn-" + k).html(r.trim());
