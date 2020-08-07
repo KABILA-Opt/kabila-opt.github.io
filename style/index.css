@@ -104,11 +104,6 @@ section {
   text-shadow: 1px 1px 4px #000;
 }
 
-.btn-ubereats,
-.btn-doordash {
-  margin: 20px 0;
-}
-
 a.link-to-book:hover {
   background-color: #fde53c;
   text-decoration: none;
