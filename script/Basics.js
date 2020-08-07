@@ -1,4 +1,11 @@
 (function ($) {
+    ["doordash", "ubereats"].forEach(function (k) {
+        fetch("/data/home/btn-" + k + ".html")
+            .then(function (r) { return r.text(); })
+            .then(function (r) {
+            $(".btn-" + k).html(r.trim());
+        });
+    });
     fetch("/data/" + locale() + "/home/intro-title.html")
         .then(function (r) { return r.text(); })
         .then(function (r) {
